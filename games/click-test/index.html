@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Les petits jeux - Testeur de CPS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/style.css" rel="stylesheet">
+  <script src="click-test.js" defer></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js" charset="utf-8"></script>
+</head>
+<body class="bg-dark text-white">
+
+  <div class="container py-5 text-center">
+    <div class="d-flex justify-content-center">
+        <span class="me-auto">
+            <a class="btn btn-secondary" href="../../index.html">◀️ Retour</a>
+            <a class="btn btn-secondary" href="click-test/index.html">🔄️ Rejouer</a>
+        </span>
+    </div>
+
+    <div>
+        <h1 class="display-4">🖱️ Le Testeur de CPS</h1>
+        <p class="lead">Clique le plus de fois possible pour augmenter ton CPS.</p>
+    </div>
+
+
+
+    <div id="game" class="mt-5">
+        
+        <div class="mt-5">Au premier clic sur le rectangle ci-dessous, le timer de 10 secondes se déclenchera.</div>
+        
+
+        <div id="gamePanel" class="mt-5 mb-5">
+            <button id="clickZone" class="btn btn-outline-primary" style="width: 500px; height: 200px;">Clique ici pour commencer.</button>
+            <div id="score" class="mt-5 mb-5">
+                <div id="nbClick">Nombre de clic : 0</div>
+                <div id="CPS">CPS : ❓</div>
+            </div>
+        </div>    
+        
+        <div id="chartZone" class="mt-5 d-flex justify-content-around">
+            <div id="clickChart" style="width:100%;max-width:550px;max-height: 400px;"></div>
+            <div id="cpsChart" style="width:100%;max-width:550px;max-height: 400px;"></div>
+        </div>
+    </div>
+    
+
+  </div>
+</body>
+</html>
