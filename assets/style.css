@@ -13,3 +13,7 @@
   height: 40px;
   padding: 12px; */
 }
+
+.invisible {
+  display: none;
+}
