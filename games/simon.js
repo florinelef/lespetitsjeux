@@ -9,7 +9,7 @@ const waitTime = 300;
 
 let correctPattern = '';
 let verificationIndex = 0;
-let canTouchButtons = true;
+let canTouchButtons = false;
 let score = 0;
 
 startButton.addEventListener('click', startGame);
