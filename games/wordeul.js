@@ -86,6 +86,9 @@ function writeWord(word, linenumber, letter = 0, lettersRemaining = null) {
 
 			if (word[letter] === correctWord[letter]) {
 				box.classList.add('green');
+				document
+					.querySelector(`#letter-${word[letter]}`)
+					.classList.add('green');
 				lettersStatus[word[letter]] = 2;
 				lettersRemaining[letter] = null;
 			}
@@ -99,10 +102,16 @@ function writeWord(word, linenumber, letter = 0, lettersRemaining = null) {
 						const idx = lettersRemaining.indexOf(word[i]);
 						if (idx !== -1) {
 							b.classList.add('orange');
+							document
+								.querySelector(`#letter-${word[i]}`)
+								.classList.add('orange');
 							lettersStatus[word[i]] = 1;
 							lettersRemaining[idx] = null;
 						} else {
 							b.classList.add('gray');
+							document
+								.querySelector(`#letter-${word[i]}`)
+								.classList.add('gray');
 							lettersStatus[word[i]] = 0;
 						}
 					}
