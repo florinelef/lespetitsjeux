@@ -45,6 +45,11 @@ let currentLineNumber = 1;
 
 guessButton.addEventListener('click', () => guess(guessInput.value));
 
+//appuie sur Entrer pour guess
+guessInput.addEventListener('keypress', event => {
+	if (event.key === 'Enter') guess(guessInput.value);
+});
+
 function guess(word) {
 	if (word === correctWord) {
 		writeWord(word, currentLineNumber);
@@ -55,8 +60,19 @@ function guess(word) {
 		if (currentLineNumber === 7) {
 			endGame();
 		}
+	} else {
+		colorBadGuess();
 	}
 	guessInput.value = '';
+}
+
+function colorBadGuess() {
+	guessButton.classList.remove('btn-primary');
+	guessButton.classList.add('btn-danger');
+	setTimeout(() => {
+		guessButton.classList.remove('btn-danger');
+		guessButton.classList.add('btn-primary');
+	}, 700);
 }
 
 function endGame() {
