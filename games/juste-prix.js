@@ -7,8 +7,15 @@ const guessWindow = document.querySelector('#guess');
 
 guessButton.addEventListener('click', guess);
 
+guessInput.addEventListener('keypress', event => {
+	if (event.key === 'Enter') {
+		guess();
+	}
+});
+
 function guess(event) {
 	let answer = guessInput.value;
+	guessInput.value = '';
 	//verification de la validité de la réponse
 	if (answer > 0 && answer <= 100) {
 		// incrémentation du compteur d'essai
