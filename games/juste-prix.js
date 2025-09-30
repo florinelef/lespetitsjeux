@@ -8,7 +8,7 @@ const guessWindow = document.querySelector('#guess');
 guessButton.addEventListener('click', guess);
 
 guessInput.addEventListener('keypress', event => {
-	if (event.key === 'Enter') {
+	if (event.key === 'Enter' && !guessButton.disabled) {
 		guess();
 	}
 });
