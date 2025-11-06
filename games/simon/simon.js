@@ -5,7 +5,7 @@ const b3 = document.querySelector('#b3');
 const b4 = document.querySelector('#b4');
 
 const coloredTime = 450;
-const waitTime = 300;
+const waitTime = 400;
 
 let correctPattern = '';
 let verificationIndex = 0;
@@ -73,30 +73,30 @@ function playPattern(pattern, i = 0) {
 function lightup(colorNumber) {
 	switch (colorNumber) {
 		case '1':
-			b1.classList.add('btn-primary');
+			b1.classList.add('blue');
 			setTimeout(() => {
-				b1.classList.remove('btn-primary');
+				b1.classList.remove('blue');
 			}, waitTime);
 			break;
 
 		case '2':
-			b2.classList.add('btn-danger');
+			b2.classList.add('red');
 			setTimeout(() => {
-				b2.classList.remove('btn-danger');
+				b2.classList.remove('red');
 			}, waitTime);
 			break;
 
 		case '3':
-			b3.classList.add('btn-warning');
+			b3.classList.add('yellow');
 			setTimeout(() => {
-				b3.classList.remove('btn-warning');
+				b3.classList.remove('yellow');
 			}, waitTime);
 			break;
 
 		case '4':
-			b4.classList.add('btn-success');
+			b4.classList.add('green');
 			setTimeout(() => {
-				b4.classList.remove('btn-success');
+				b4.classList.remove('green');
 			}, waitTime);
 			break;
 

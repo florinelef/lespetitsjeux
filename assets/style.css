@@ -38,3 +38,59 @@
   background-color: transparent;
   color: white !important;
 }
+
+.blue {
+  background-color: #537ef5 !important;
+  color: white !important;
+  border-radius: 100% 0 0 0;
+}
+
+.blue-outline {
+  background-color: transparent;
+  border-color: #537ef5;
+  border-width: 4px;
+  color: #537ef5;
+  border-radius: 100% 0 0 0;
+}
+
+.red {
+  background-color: #f55358 !important;
+  color:white !important;
+  border-radius: 0 100% 0 0;
+}
+
+.red-outline {
+  background-color: transparent;
+  border-color: #f55358;
+  border-width: 4px;
+  color: #f55358;
+  border-radius: 0 100% 0 0;
+}
+
+.yellow {
+  background-color: #e8d60e !important;
+  color: black !important;
+  border-radius: 0 0 0 100%;
+}
+
+.yellow-outline {
+  background-color: transparent;
+  border-color: #e8d60e;
+  border-width: 4px;
+  color: #e8d60e;
+  border-radius: 0 0 0 100%;
+}
+
+.green {
+  background-color: #28d904 !important;
+  color: white !important;
+  border-radius: 0 0 100% 0;
+}
+
+.green-outline {
+  background-color: transparent;
+  border-color: #28d904;
+  border-width: 4px;
+  color: #28d904;
+  border-radius: 0 0 100% 0;
+}
