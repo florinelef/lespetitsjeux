@@ -124,10 +124,9 @@ function writeWord(word, linenumber, letter = 0, lettersRemaining = null) {
 							lettersStatus[word[i]] = 1;
 							lettersRemaining[idx] = null;
 						} else {
-							b.classList.add('gray-letter');
 							document
 								.querySelector(`#letter-${word[i]}`)
-								.classList.add('gray-letter');
+								.classList.add('notin');
 							lettersStatus[word[i]] = 0;
 						}
 					}

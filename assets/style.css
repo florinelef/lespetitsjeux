@@ -29,7 +29,6 @@
 }
 
 .gray-letter {
-  background-color: #3a3a3c;
   font-size: 30px;
 }
 
@@ -132,4 +131,8 @@
     transform: scale(1);
     opacity: 0;
   }
+}
+
+.notin {
+  color: rgb(109, 109, 109);
 }
