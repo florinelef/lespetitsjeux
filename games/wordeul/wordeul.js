@@ -101,10 +101,10 @@ function writeWord(word, linenumber, letter = 0, lettersRemaining = null) {
 			box.innerHTML = word[letter].toUpperCase();
 
 			if (word[letter] === correctWord[letter]) {
-				box.classList.add('green');
+				box.classList.add('green-letter');
 				document
 					.querySelector(`#letter-${word[letter]}`)
-					.classList.add('green');
+					.classList.add('green-letter');
 				lettersStatus[word[letter]] = 2;
 				lettersRemaining[letter] = null;
 			}
@@ -114,20 +114,20 @@ function writeWord(word, linenumber, letter = 0, lettersRemaining = null) {
 			} else {
 				for (let i = 0; i < 5; i++) {
 					const b = document.querySelector(`#l${linenumber}-c${i + 1}`);
-					if (!b.classList.contains('green')) {
+					if (!b.classList.contains('green-letter')) {
 						const idx = lettersRemaining.indexOf(word[i]);
 						if (idx !== -1) {
-							b.classList.add('orange');
+							b.classList.add('orange-letter');
 							document
 								.querySelector(`#letter-${word[i]}`)
-								.classList.add('orange');
+								.classList.add('orange-letter');
 							lettersStatus[word[i]] = 1;
 							lettersRemaining[idx] = null;
 						} else {
-							b.classList.add('gray');
+							b.classList.add('gray-letter');
 							document
 								.querySelector(`#letter-${word[i]}`)
-								.classList.add('gray');
+								.classList.add('gray-letter');
 							lettersStatus[word[i]] = 0;
 						}
 					}

@@ -18,19 +18,18 @@
   display: none;
 }
 
-.orange {
+.orange-letter {
   background-color: #b56c3b;
+  font-size: 30px;
 }
 
-.green {
+.green-letter {
   background-color: #4e8d6d;
+  font-size: 30px;
 }
 
-.gray {
+.gray-letter {
   background-color: #3a3a3c;
-}
-
-.letter {
   font-size: 30px;
 }
 
