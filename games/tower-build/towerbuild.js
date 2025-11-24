@@ -246,11 +246,28 @@ let countdownValue = 3;
 let globalTime = 60;
 let globalInterval = null;
 
-document.addEventListener('mouseup', () => startCountdown());
-document.addEventListener('mousedown', () => stopCountdown());
+//pc
+game.addEventListener('mouseup', () => startCountdown());
+game.addEventListener('mousedown', () => stopCountdown());
 
-document.addEventListener('touchend', () => startCountdown());
-document.addEventListener('touchstart', () => stopCountdown());
+// mobile
+game.addEventListener(
+	'touchstart',
+	e => {
+		e.preventDefault();
+		stopCountdown();
+	},
+	{ passive: false }
+);
+
+game.addEventListener(
+	'touchend',
+	e => {
+		e.preventDefault();
+		startCountdown();
+	},
+	{ passive: false }
+);
 
 let elements = [];
 let finishLine;
