@@ -249,6 +249,9 @@ let globalInterval = null;
 document.addEventListener('mouseup', () => startCountdown());
 document.addEventListener('mousedown', () => stopCountdown());
 
+document.addEventListener('touchend', () => startCountdown());
+document.addEventListener('touchstart', () => stopCountdown());
+
 let elements = [];
 let finishLine;
 
