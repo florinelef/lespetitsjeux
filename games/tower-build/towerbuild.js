@@ -210,7 +210,7 @@ const timer = document.querySelector('#timer');
 
 const xmid = game.offsetWidth / 2 - 10;
 const ymid = 300;
-const unit = ymid / 10;
+const unit = Math.min(xmid, ymid) / 10;
 
 let Engine = Matter.Engine,
 	Render = Matter.Render,
